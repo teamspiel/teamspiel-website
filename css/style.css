@@ -13,7 +13,7 @@
 @import url(Blocks/link.css);
 @import url(Blocks/list.css);
 @import url(Blocks/header.css);
-@import url(Blocks/image.css);
+@import url(Blocks/header-image.css);
 @import url(Blocks/card.css);
 @import url(Blocks/image-card.css);
 @import url(Blocks/illustration-container.css);
@@ -21,3 +21,4 @@
 @import url(Blocks/textarea-input.css);
 @import url(Blocks/icon.css);
 @import url(Blocks/parallax.css);
+@import url(Blocks/logo.css);
