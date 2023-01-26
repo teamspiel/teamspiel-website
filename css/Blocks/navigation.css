@@ -1,4 +1,4 @@
-.header {
+.navigation {
   width: 100%;
   background: var(--color-dark);
   position: fixed;
@@ -7,7 +7,7 @@
   z-index: 100;
 }
 
-.header__inner {
+.navigation__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
