@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  gap: var(--spacing-s);
+  flex-wrap: wrap
+}
+
+.list--mt {
+  margin-top: var(--spacing-l);
+}
+
+.list--space-evenly {
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0 var(--spacing-xl);
+}
+
+.list--space-between {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.list--v-align-center {
+  align-items: center;
+}
+
+.list--center {
+  justify-content: center;
+}
+
+.list--gap-xl {
+  gap: var(--spacing-xl);
+}

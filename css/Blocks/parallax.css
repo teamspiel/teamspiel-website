@@ -1,0 +1,10 @@
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax__image {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}

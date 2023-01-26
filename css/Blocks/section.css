@@ -1,0 +1,48 @@
+.section {
+  padding: var(--spacing-xl);
+  min-height: 1080px;
+  height: 100%;
+  display: flex;
+}
+
+.section--centered > .section__inner {
+  align-items: center;
+}
+
+.section--v-centered {
+  align-items: center;
+}
+
+.section--dark {
+  background-color: var(--color-dark);
+}
+
+.section--primary {
+  background-color: var(--color-primary);
+}
+
+.section--secondary {
+  background-color: var(--color-secondary-transparent);
+}
+
+.section--s {
+  min-height: 540px;
+}
+
+.section--xs {
+  min-height: 360px;
+}
+
+.section--xxs {
+  min-height: 180px;
+}
+
+.section__inner {
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  flex: 1;
+  position: relative;
+}

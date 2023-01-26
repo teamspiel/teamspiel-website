@@ -1,0 +1,22 @@
+.illustration-container {
+  position: relative;
+}
+
+.illustration-container .heading {
+  z-index: 10;
+}
+
+.illustration-container img {
+  z-index: 0;
+  position: absolute;
+}
+
+.illustration-container #star-1 {
+  top: -160px;
+  left: -165px;
+}
+
+.illustration-container #star-2 {
+  top: -50px;
+  right: -80px;
+}

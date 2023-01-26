@@ -1,0 +1,20 @@
+.card {
+  background: var(--color-light-grey);
+  padding: var(--spacing-m);
+  border-radius: var(--border-radius-m);
+  max-width: 300px;
+  min-width: 250px;
+}
+
+.card__icon {
+  display: inline-flex;
+  background: var(--color-light);
+  padding: var(--spacing-xxs);
+  border-radius: var(--border-radius-m);
+  margin-bottom: var(--spacing-m);
+}
+
+.card__icon > img {
+  width: 60px;
+  height: 60px;
+}

@@ -1,0 +1,17 @@
+.paragraph {
+  font-size: 1em;
+  color: var(--color-medium-grey);
+  margin-bottom: var(--spacing-s);
+}
+
+.paragraph--light {
+  color: var(--color-light);
+}
+
+.paragraph--bold {
+  font-weight: bold;
+}
+
+.paragraph--s {
+  font-size: 0.85em;
+}

@@ -1,0 +1,20 @@
+:root {
+  --spacing-xxs: 5px;
+  --spacing-xs: 10px;
+  --spacing-s: 15px;
+  --spacing-m: 20px;
+  --spacing-l: 30px;
+  --spacing-xl: 60px;
+
+  --border-radius-m: 10px;
+
+  --transition-speed-default: 200ms;
+
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-primary: #3C2C5B;
+  --color-secondary: #9e76dd;
+  --color-secondary-transparent: rgba(158, 118, 221, 0.7);
+  --color-medium-grey: #9A9B9D;
+  --color-light-grey: #F7F7F7;
+}

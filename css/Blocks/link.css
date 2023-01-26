@@ -1,0 +1,45 @@
+.link {
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--color-secondary);
+  transition: all var(--transition-speed-default) ease;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+.link--light {
+  color: var(--color-light);
+}
+
+.link--light:hover {
+  color: var(--color-secondary);
+}
+
+.link--s {
+  font-size: 0.85em;
+}
+
+.link--xs {
+  font-size: 0.75em;
+}
+
+.link--bold {
+  font-weight: bold;
+}
+
+.link--icon img {
+  width: 40px;
+  height: 40px;
+  transition: all var(--transition-speed-default) ease;
+}
+
+.link--icon:hover img {
+  transform: scale(1.1);
+}
+
+.link--icon:active img {
+  transform: scale(1.00);
+}

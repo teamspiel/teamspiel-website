@@ -1,0 +1,31 @@
+.heading {
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: var(--spacing-s);
+  position: relative;
+}
+
+.heading--light {
+  color: var(--color-light);
+}
+
+.heading--regular {
+  font-weight: normal;
+}
+
+.heading--xl {
+  font-size: 4em;
+}
+
+.heading--m {
+  font-size: 1.1em;
+}
+
+.heading--s {
+  font-size: 0.9em;
+}
+
+.heading--xxs {
+  font-size: 0.65em;
+  margin-bottom: var(--spacing-xxs);
+}

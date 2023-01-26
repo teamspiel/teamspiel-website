@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  background: var(--color-dark);
+  position: fixed;
+  top: 0;
+  padding: var(--spacing-m) var(--spacing-xl);
+  z-index: 100;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}

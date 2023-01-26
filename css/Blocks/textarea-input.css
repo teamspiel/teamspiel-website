@@ -1,0 +1,12 @@
+.textarea-input {
+  font-size: 0.9em;
+  display: block;
+  border-radius: var(--border-radius-m);
+  border: solid 1px var(--color-medium-grey);
+  width: 100%;
+  padding: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+  resize: none;
+  height: 200px;
+  font-family: inherit;
+}

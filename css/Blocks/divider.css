@@ -1,0 +1,23 @@
+.divider {
+  background-color: var(--color-secondary);
+  height: 3px;
+  width: 65px;
+  margin-bottom: var(--spacing-s);
+  border-radius: var(--border-radius-m);
+}
+
+.divider--l {
+  width: 80px;
+}
+
+.divider--centered {
+  margin: 0 auto var(--spacing-s);
+}
+
+.divider--full {
+  width: 100%;
+}
+
+.divider--light {
+  background-color: var(--color-light);
+}
