@@ -11,6 +11,7 @@
   transition: all var(--transition-speed-default) ease;
   border: none;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .button:hover {
