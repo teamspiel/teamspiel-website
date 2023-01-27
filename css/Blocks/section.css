@@ -1,6 +1,5 @@
 .section {
-  padding: var(--spacing-xl);
-  min-height: 1080px;
+  padding: var(--spacing-l);
   height: 100%;
   display: flex;
 }
@@ -25,18 +24,6 @@
   background-color: var(--color-secondary-transparent);
 }
 
-.section--s {
-  min-height: 540px;
-}
-
-.section--xs {
-  min-height: 360px;
-}
-
-.section--xxs {
-  min-height: 180px;
-}
-
 .section__inner {
   max-width: 1920px;
   width: 100%;
@@ -45,4 +32,23 @@
   margin: 0 auto;
   flex: 1;
   position: relative;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    min-height: 1080px;
+    padding: var(--spacing-xl);
+  }
+
+  .section--s {
+    min-height: 540px;
+  }
+  
+  .section--xs {
+    min-height: 360px;
+  }
+  
+  .section--xxs {
+    min-height: 180px;
+  }
 }

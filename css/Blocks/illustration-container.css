@@ -12,11 +12,23 @@
 }
 
 .illustration-container #star-1 {
-  top: -160px;
-  left: -165px;
+  display: none;
 }
 
 .illustration-container #star-2 {
-  top: -50px;
-  right: -80px;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .illustration-container #star-1 {
+    display: block;
+    top: -160px;
+    left: -165px;
+  }
+  
+  .illustration-container #star-2 {
+    display: block;
+    top: -50px;
+    right: -80px;
+  }
 }
