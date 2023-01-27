@@ -51,37 +51,30 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.article--75-laptop-l {
-  width: 100%;
+.article--max-600 {
+  max-width: 600px;
 }
 
 @media (min-width: 1024px) {
   .article--25 {
     width: 25%;
+    min-width: 25%;
   }
   
-  .article--35 {
-    width: 35%;
-  }
-  
+
   .article--50 {
     width: 50%;
+    min-width: 50%;
   }
   
   .article--75 {
     width: 75%;
+    min-width: 75%;
   }
 }
 
 @media (min-width: 1440px) {
   .article--hidden-laptop {
     display: flex;
-  }
-}
-
-
-@media (max-width: 1440px) {
-  .article--75-laptop-l {
-    width: 75%;
   }
 }

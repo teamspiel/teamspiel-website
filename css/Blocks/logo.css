@@ -1,7 +1,12 @@
 .logo {
-  width: 250px;
+  width: 100%;
 }
 
-.logo--l {
-  width: 350px;
+@media (min-width: 426px) {
+  .logo { 
+    width: 250px;
+  }
+  .logo--l {
+    width: 350px;
+  }
 }
