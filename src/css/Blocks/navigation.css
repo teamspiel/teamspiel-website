@@ -11,8 +11,8 @@
 }
 
 @media (min-width: 1024px) {
-	.navigation {
-    position: fixed;
+  .navigation {
+    position: sticky;
     top: 0;
     padding: var(--spacing-m) var(--spacing-xl);
     z-index: 100;

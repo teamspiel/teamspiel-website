@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const FooterComponent = () => {
   return (
     <footer className="footer">
@@ -65,10 +67,18 @@ export const FooterComponent = () => {
                 </article>
                 <article className="article article--auto">
                   <div className="list">
-                    <a className="link link--light link--s link--bold">Terms</a>
-                    <a className="link link--light link--s link--bold">
+                    <Link
+                      to="/imprint"
+                      className="link link--light link--s link--bold"
+                    >
+                      Terms
+                    </Link>
+                    <Link
+                      to="/privacy"
+                      className="link link--light link--s link--bold"
+                    >
                       Privacy
-                    </a>
+                    </Link>
                   </div>
                 </article>
               </article>

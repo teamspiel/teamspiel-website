@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 export const NavigationComponent = () => {
   return (
     <nav className="navigation">
       <div className="navigation__inner">
         <div>
-          <a href="#">
+          <Link to="/">
             <img className="logo" src="/media/logo.svg" />
-          </a>
+          </Link>
         </div>
         <div className="list navigation__list">
           <a className="link link--light link--bold" href="#services">

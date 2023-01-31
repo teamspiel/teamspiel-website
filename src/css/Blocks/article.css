@@ -10,7 +10,7 @@
 }
 
 .article--gap-l {
-  gap: var(--spacing-l)
+  gap: var(--spacing-l);
 }
 
 .article--hidden-laptop {
@@ -24,6 +24,7 @@
 .article--centered {
   margin: 0 auto;
   text-align: center;
+  align-items: center;
 }
 
 .article--v-align-center {
@@ -60,13 +61,12 @@
     width: 25%;
     min-width: 25%;
   }
-  
 
   .article--50 {
     width: 50%;
     min-width: 50%;
   }
-  
+
   .article--75 {
     width: 75%;
     min-width: 75%;
