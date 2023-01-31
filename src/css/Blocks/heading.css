@@ -9,6 +9,10 @@
   color: var(--color-light);
 }
 
+.heading--mt-l {
+  margin-top: var(--spacing-l);
+}
+
 .heading--regular {
   font-weight: normal;
 }
@@ -38,15 +42,15 @@
   .heading--xl {
     font-size: 4em;
   }
-  
+
   .heading--m {
     font-size: 1.1em;
   }
-  
+
   .heading--s {
     font-size: 0.9em;
   }
-  
+
   .heading--xxs {
     font-size: 0.65em;
     margin-bottom: var(--spacing-xxs);
