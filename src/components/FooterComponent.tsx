@@ -9,14 +9,14 @@ export const FooterComponent = () => {
             <article className="article article--row article--space-between article--gap-l">
               <article className="article article--75">
                 <h4 className="heading heading--light heading--m heading--regular">
-                  Software- and consulting agency
+                  Software- und Consultingagentur
                 </h4>
                 <div className="divider"></div>
                 <img src="/media/logo.svg" className="logo logo--l" />
               </article>
               <article className="article article--auto">
                 <h4 className="heading heading--light heading--m heading--regular">
-                  Contact
+                  Kontakt
                 </h4>
                 <div className="divider"></div>
                 <p className="paragraph paragraph--light paragraph--bold">
@@ -71,13 +71,13 @@ export const FooterComponent = () => {
                       to="/imprint"
                       className="link link--light link--s link--bold"
                     >
-                      Terms
+                      Impressum
                     </Link>
                     <Link
                       to="/privacy"
                       className="link link--light link--s link--bold"
                     >
-                      Privacy
+                      Datenschutz
                     </Link>
                   </div>
                 </article>

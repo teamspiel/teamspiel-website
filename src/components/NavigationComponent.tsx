@@ -14,16 +14,16 @@ export const NavigationComponent = () => {
         {location.pathname === "/" && (
           <div className="list navigation__list">
             <a className="link link--light link--bold" href="#services">
-              Services
+              Leistungen
             </a>
             <a className="link link--light link--bold" href="#about-us">
-              About us
+              Über uns
             </a>
             <a className="link link--light link--bold" href="#career">
-              Career
+              Karriere
             </a>
             <a className="link link--light link--bold" href="#contact">
-              Contact
+              Kontakt
             </a>
           </div>
         )}
