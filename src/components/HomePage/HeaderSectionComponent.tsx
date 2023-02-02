@@ -11,7 +11,7 @@ export const HeaderSectionComponent = () => {
         <article className="article article--space-between article--row article--no-wrap article--gap-l">
           <article className="article article--auto">
             <h2 className="heading heading--light">
-              Softwareentwicklung so kollaborativ, dass sie quasi in-house
+              Softwareentwicklung so kollaborativ, dass sie quasi inhouse
               entwickelt wird.
             </h2>
             <p className="paragraph paragraph--light">
