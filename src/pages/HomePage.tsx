@@ -34,7 +34,7 @@ export const HomePage = () => {
       </section>
       <section className="section section--centered" id="services">
         <div className="section__inner">
-          <article className="article article--50 article--centered article--mb-xl">
+          <article className="article article--50 article--centered article--text-centered article--mb-xl">
             <h2 className="heading heading--s">Services</h2>
             <div className="divider divider--l divider--centered"></div>
             <h3 className="heading">
@@ -114,7 +114,7 @@ export const HomePage = () => {
       </div>
       <section className="section section--centered" id="about-us">
         <div className="section__inner">
-          <article className="article article--50 article--centered article--mb-xl">
+          <article className="article article--50 article--centered article--text-centered article--mb-xl">
             <h2 className="heading heading--s">About us</h2>
             <div className="divider divider--l divider--centered"></div>
             <h3 className="heading">
@@ -203,7 +203,7 @@ export const HomePage = () => {
       </section>
       <section className="section section--centered" id="contact">
         <div className="section__inner">
-          <article className="article article--max-600 article--centered article--mb-xl">
+          <article className="article article--max-600 article--centered article--text-centered article--mb-xl">
             <h2 className="heading heading--s">Contact</h2>
             <div className="divider divider--l divider--centered"></div>
             <h3 className="heading">

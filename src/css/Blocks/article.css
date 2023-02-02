@@ -23,6 +23,9 @@
 
 .article--centered {
   margin: 0 auto;
+}
+
+.article--text-centered {
   text-align: center;
   align-items: center;
 }
