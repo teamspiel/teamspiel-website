@@ -3,6 +3,8 @@
   font-size: 2em;
   margin-bottom: var(--spacing-s);
   position: relative;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .heading--light {
