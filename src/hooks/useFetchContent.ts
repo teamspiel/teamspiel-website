@@ -10,7 +10,7 @@ export const useFetchContent = (query: any) => {
         headers: {
           "Content-Type": "application/json",
           // Authenticate the request
-          Authorization: "Bearer nRQq1psgRl49LIrxOvsKbyQ_onA_T712zBNuju-hzs8",
+          Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_AUTH_TOKEN}`,
         },
         // send the GraphQL query
         body: JSON.stringify({ query }),
