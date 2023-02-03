@@ -1,4 +1,12 @@
-export const CTASectionComponent = () => {
+import React from "react";
+
+interface CTASectionComponentProps {
+  content: any;
+}
+
+export const CTASectionComponent: React.FC<CTASectionComponentProps> = ({
+  content,
+}) => {
   return (
     <div className="parallax">
       <img className="parallax__image" src="media/stars.jpg" />
@@ -7,10 +15,10 @@ export const CTASectionComponent = () => {
           <article className="article article--row article--space-between article--no-wrap">
             <article className="article article--75">
               <h3 className="heading heading--xl heading--light">
-                Starten wir die Kooperation!
+                {content.title}
               </h3>
               <a className="button" href="#contact">
-                Jetzt kontaktieren
+                {content.buttonLabel}
               </a>
             </article>
             <article className="article article--auto article--hidden-laptop">

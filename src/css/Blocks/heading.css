@@ -36,6 +36,16 @@
   margin-bottom: var(--spacing-xxs);
 }
 
+.heading--contentful h3 {
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.heading--contentful i {
+  font-style: normal;
+  color: var(--color-secondary);
+}
+
 @media (min-width: 1024px) {
   .heading {
     font-size: 3em;
