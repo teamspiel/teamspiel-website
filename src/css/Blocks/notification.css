@@ -1,0 +1,19 @@
+.notification {
+  font-size: 0.8em;
+  color: var(--color-light);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-m);
+  margin-bottom: var(--spacing-m);
+}
+
+.notification--success {
+  background-color: var(--color-success);
+}
+
+.notification--error {
+  background-color: var(--color-error);
+}
+
+.notification--hidden {
+  display: none;
+}

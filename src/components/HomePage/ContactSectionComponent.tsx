@@ -1,4 +1,6 @@
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { useCallback, useRef, useState } from "react";
+import axios from "axios";
 
 interface ContactSectionComponentProps {
   content: any;
@@ -7,6 +9,51 @@ interface ContactSectionComponentProps {
 export const ContactSectionComponent: React.FC<
   ContactSectionComponentProps
 > = ({ content }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
+  const successNotification = useRef<HTMLDivElement>(null);
+  const errorNotification = useRef<HTMLDivElement>(null);
+
+  const sendContactMail = useCallback((e: any) => {
+    e.preventDefault();
+    successNotification.current?.classList.add("notification--hidden");
+    errorNotification.current?.classList.add("notification--hidden");
+
+    setIsLoading(true);
+
+    const data = {
+      email: e.target.email.value,
+      name: e.target.name.value,
+      phone: e.target.phone.value,
+      message: e.target.message.value,
+    };
+
+    axios({
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      url: "/.netlify/functions/send-email",
+      data: data,
+    })
+      .then(() => {
+        form.current?.reset();
+        successNotification.current?.classList.remove("notification--hidden");
+        setTimeout(
+          () =>
+            successNotification.current?.classList.add("notification--hidden"),
+          3000
+        );
+      })
+      .catch(() => {
+        errorNotification.current?.classList.remove("notification--hidden");
+        setTimeout(
+          () =>
+            errorNotification.current?.classList.add("notification--hidden"),
+          3000
+        );
+      })
+      .finally(() => setIsLoading(false));
+  }, []);
+
   return (
     <section className="section section--centered" id="contact">
       <div className="section__inner">
@@ -22,31 +69,49 @@ export const ContactSectionComponent: React.FC<
           <p className="paragraph">{content.paragraph}</p>
         </article>
         <article className="article article--max-600 article--mb-l">
-          <form>
+          <div
+            ref={successNotification}
+            className="notification notification--success notification--hidden fade-in"
+          >
+            Anfrage wurde verschickt
+          </div>
+          <div
+            ref={errorNotification}
+            className="notification notification--error notification--hidden fade-in"
+          >
+            Anfrage konnte nicht verschickt werden, bitte versuchen Sie es
+            später erneut.
+          </div>
+          <form onSubmit={(e) => sendContactMail(e)} ref={form}>
             <input
               type="text"
+              name="name"
               className="text-input"
               placeholder={content.formNameLabel}
               required
             />
             <input
-              type="text"
+              type="email"
+              name="email"
               className="text-input"
               placeholder={content.formEmailLabel}
               required
             />
             <input
-              type="text"
+              type="tel"
+              name="phone"
               className="text-input"
               placeholder={content.formPhoneLabel}
             />
             <textarea
+              name="message"
               className="textarea-input"
               placeholder={content.formTextboxLabel}
               required
             ></textarea>
             <input
               type="submit"
+              disabled={isLoading}
               className="button button--full-width button--bold"
               value={content.formSubmitLabel}
             />

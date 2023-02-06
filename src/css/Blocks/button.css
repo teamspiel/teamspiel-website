@@ -21,7 +21,13 @@
 }
 
 .button:active {
-  transform: scale(1.00);
+  transform: scale(1);
+}
+
+.button:hover:disabled {
+  background-color: var(--color-primary);
+  transform: scale(1);
+  cursor: default;
 }
 
 .button--secondary {
