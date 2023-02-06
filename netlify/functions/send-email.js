@@ -1,3 +1,4 @@
+const { default: axios } = require("axios");
 const formData = require("form-data");
 const Mailgun = require("mailgun.js");
 
@@ -22,6 +23,19 @@ const sendEmail = async ({ email, name, message, phone }) => {
 exports.handler = async (event, context) => {
   try {
     const data = JSON.parse(event.body);
+
+    // Validate captcha
+    const captchaResponse = await axios.post(
+      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.REACT_APP_RECAPTCHA_SECRET_KEY}&response=${data.captchaToken}`
+    );
+    if (!captchaResponse.data.success) {
+      return {
+        statusCode: 401,
+        body: JSON.stringify({
+          message: "Captcha failed",
+        }),
+      };
+    }
 
     await sendEmail(data);
 

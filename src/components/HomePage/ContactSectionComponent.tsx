@@ -1,6 +1,7 @@
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface ContactSectionComponentProps {
   content: any;
@@ -10,22 +11,32 @@ export const ContactSectionComponent: React.FC<
   ContactSectionComponentProps
 > = ({ content }) => {
   const [isLoading, setIsLoading] = useState(false);
+
   const form = useRef<HTMLFormElement>(null);
   const successNotification = useRef<HTMLDivElement>(null);
   const errorNotification = useRef<HTMLDivElement>(null);
+  const captchaRef = useRef<ReCAPTCHA>(null);
 
-  const sendContactMail = useCallback((e: any) => {
+  const sendContactMail = async (e: any) => {
     e.preventDefault();
     successNotification.current?.classList.add("notification--hidden");
     errorNotification.current?.classList.add("notification--hidden");
-
     setIsLoading(true);
+
+    let captchaToken = captchaRef.current?.getValue();
+    if (!captchaToken) {
+      captchaToken = await captchaRef.current
+        ?.executeAsync()
+        .then((token) => token);
+    }
+    captchaRef.current?.reset();
 
     const data = {
       email: e.target.email.value,
       name: e.target.name.value,
       phone: e.target.phone.value,
       message: e.target.message.value,
+      captchaToken: captchaToken,
     };
 
     axios({
@@ -37,22 +48,12 @@ export const ContactSectionComponent: React.FC<
       .then(() => {
         form.current?.reset();
         successNotification.current?.classList.remove("notification--hidden");
-        setTimeout(
-          () =>
-            successNotification.current?.classList.add("notification--hidden"),
-          3000
-        );
       })
       .catch(() => {
         errorNotification.current?.classList.remove("notification--hidden");
-        setTimeout(
-          () =>
-            errorNotification.current?.classList.add("notification--hidden"),
-          3000
-        );
       })
       .finally(() => setIsLoading(false));
-  }, []);
+  };
 
   return (
     <section className="section section--centered" id="contact">
@@ -109,6 +110,11 @@ export const ContactSectionComponent: React.FC<
               placeholder={content.formTextboxLabel}
               required
             ></textarea>
+            <ReCAPTCHA
+              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY as string}
+              size="invisible"
+              ref={captchaRef}
+            />
             <input
               type="submit"
               disabled={isLoading}
